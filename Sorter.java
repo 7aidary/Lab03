@@ -32,6 +32,20 @@ public class Sorter {
             array[i] = temp;
         }
     }
+    public class InsertionSort {
+    public static void sort(int[] array) {
+        int length = array.length;
+        for (int index = 1; index < length; index++) {
+            int currentElement = array[index];
+            int previousIndex = index - 1;
+
+            while (previousIndex >= 0 && array[previousIndex] > currentElement) {
+                array[previousIndex + 1] = array[previousIndex];
+                previousIndex--;
+            }
+            array[previousIndex + 1] = currentElement;
+        }
+    }
 }
-hello
-    
+}
+
